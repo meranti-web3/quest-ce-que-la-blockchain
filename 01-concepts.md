@@ -19,9 +19,9 @@ Celui-ci peut être digitalisé ou même maintenu dans un simple cahier en papie
 
 Grâce aux progrès en cryptographie, technologie permettant de garantir l'intégrité de données digitalisées, nous avons pu mettre en place un livre de compte décentralisé permettant de corriger ces défauts:
 
-1. Décentralisé: Le livre de compte existe à plusieurs endroits différents (créant un réseau), chaque participant peut écrire une transaction dans ce livre de compte qui sera ensuite envoyée aux autres copies.
-2. Infalsifiable: Chaque copie du livre de compte est identique, un livre de compte falsifié serait différent des autres et rejeté par le réseau
-3. Transparent: Chacun peut obtenir une copie du livre de compte et éplucher ses transactions
+1. Décentralisé: Le livre de compte existe à plusieurs endroits différents (créant un réseau), chaque participant peut écrire une transaction dans ce livre de compte qui sera ensuite synchronisé avec les autres copies via un mécanisme de validation, consensus et réplication.
+2. Infalsifiable: Chaque copie du livre de compte est identique, un livre de compte falsifié ne pourrait plus ajouter de nouvelles transactions et serait rejeté par le réseau.
+3. Transparent: Chacun peut obtenir une copie du livre de compte et éplucher ses transactions.
 
 ## Types de transactions
 
