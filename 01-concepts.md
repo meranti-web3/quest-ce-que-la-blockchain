@@ -1,4 +1,4 @@
-# Concepts
+# 01 Concepts
 
 La blockchain est un type d'implémentation de ce qu'on appelle plus génériquement une Distributed Ledger Technology ou DLT.
 Un Ledger signifie un registre, ou un livre de comptes.
