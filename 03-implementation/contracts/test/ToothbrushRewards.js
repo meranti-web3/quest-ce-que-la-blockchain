@@ -1,4 +1,7 @@
-const { loadFixture } = require("@nomicfoundation/hardhat-network-helpers");
+const {
+  loadFixture,
+  time,
+} = require("@nomicfoundation/hardhat-network-helpers");
 const { expect } = require("chai");
 
 describe("ToothbrushRewards", function () {
@@ -65,6 +68,35 @@ describe("ToothbrushRewards", function () {
 
       expect(await toothbrushRewards.viewReward(aliceAccount.address)).to.equal(
         0
+      );
+    });
+
+    it("Should not allow rewards for consecutive brushes", async function () {
+      const { toothbrushRewards, aliceAccount } = await loadFixture(
+        ddeployToothbrushRewardsFixture
+      );
+
+      await toothbrushRewards.connect(aliceAccount).brushTeeth();
+      await toothbrushRewards.connect(aliceAccount).brushTeeth();
+
+      expect(await toothbrushRewards.viewReward(aliceAccount.address)).to.equal(
+        100
+      );
+    });
+
+    it("Should wait for 60s before allowing rewards again", async function () {
+      const { toothbrushRewards, aliceAccount } = await loadFixture(
+        ddeployToothbrushRewardsFixture
+      );
+
+      await toothbrushRewards.connect(aliceAccount).brushTeeth();
+
+      await time.increase(60);
+
+      await toothbrushRewards.connect(aliceAccount).brushTeeth();
+
+      expect(await toothbrushRewards.viewReward(aliceAccount.address)).to.equal(
+        200
       );
     });
   });

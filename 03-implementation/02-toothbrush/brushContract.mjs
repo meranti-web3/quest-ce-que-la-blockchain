@@ -40,7 +40,7 @@ export default new ethers.Contract(
           type: "address",
         },
       ],
-      name: "lastBrushingTime",
+      name: "lastReward",
       outputs: [
         {
           internalType: "uint256",

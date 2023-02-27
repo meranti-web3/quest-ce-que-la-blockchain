@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 contract ToothbrushRewards {
     mapping(address => uint) public rewards;
-    mapping(address => uint) public lastBrushingTime;
+    mapping(address => uint) public lastReward;
 
     uint public rewardAmount = 100; // La quantité de récompense en tokens pour chaque brossage de dents réussi
 
@@ -14,13 +14,13 @@ contract ToothbrushRewards {
     }
 
     function brushTeeth() public {
-        require(
-            lastBrushingTime[msg.sender] == 0 ||
-                block.timestamp > lastBrushingTime[msg.sender] + 24 hours,
-            unicode"Vous ne pouvez réclamer qu'une récompense par jour."
-        );
-        lastBrushingTime[msg.sender] = block.timestamp;
-        rewards[msg.sender] += rewardAmount;
+        if (
+            lastReward[msg.sender] == 0 ||
+            block.timestamp > lastReward[msg.sender] + 60
+        ) {
+            lastReward[msg.sender] = block.timestamp;
+            rewards[msg.sender] += rewardAmount;
+        }
     }
 
     function viewReward(address user) public view returns (uint) {

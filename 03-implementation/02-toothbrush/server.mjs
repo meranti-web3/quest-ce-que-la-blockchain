@@ -14,17 +14,10 @@ const app = express();
 app.use(express.static("static"));
 
 app.post("/brush", async (req, res) => {
-  let brushResult;
-
-  try {
-    brushResult = await brushContract.brushTeeth({
-      gasLimit: 100000,
-    });
-
-    res.send("Bravo, c'est très propre");
-  } catch (err) {
-    res.status(400).send(err.message);
-  }
+  await brushContract.brushTeeth({
+    gasLimit: 100000,
+  });
+  res.send("Bravo, c'est très propre");
 });
 
 app.get("/rewards", async (req, res) => {
