@@ -31,4 +31,10 @@ Après avoir initialisé le projet dans `./contracts` avec `npx hardhat` nous al
 Nous pouvons ensuite compiler le contrat (`npx hardhat compile`), après avoir corrigé quelques erreurs.
 
 Nous sommes maintenant prêts à déployer le contrat sur Polygon Testnet, notre blockchain de choix.
+
+```sh
+npx hardhat run ./scripts/deploy.js --network polygontestnet
+ToothbrushRewards deployed to 0x579220B1B374340E12dC55A0d1FCd77Ff1F85cD2
+```
+
 Vous pouvez trouver le contrat à cette adresse. [`0x579220B1B374340E12dC55A0d1FCd77Ff1F85cD2`](https://mumbai.polygonscan.com/address/0x579220B1B374340E12dC55A0d1FCd77Ff1F85cD2)

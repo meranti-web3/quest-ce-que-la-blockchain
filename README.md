@@ -19,7 +19,7 @@ Pour pouvoir suivre ce tutorial, assurez-vous d'avoir [Docker](https://docs.dock
 
 ## 01 Qu'est-ce que la blockchain?
 
-La blockchain est en quelque sorte une base de données publique oû tous peuvent avoir access en lecture ou écriture.
+La blockchain est en quelque sorte une base de données publique où tous peuvent avoir access en lecture ou écriture.
 
 Voir [01-concepts](./01-concepts.md)
 

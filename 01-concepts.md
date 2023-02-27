@@ -2,7 +2,7 @@
 
 La blockchain est un type d'implémentation de ce qu'on appelle plus génériquement une Distributed Ledger Technology ou DLT.
 Un Ledger signifie un registre, ou un livre de comptes, qui retrace l'historique des transactions entre personnes.
-La blockchain a été initiallement inventée comme étant un livre de comptes ouvert à tous à la fois en lecture et en écriture.
+La blockchain a été initialement inventée comme étant un livre de comptes ouvert à tous à la fois en lecture et en écriture.
 
 ## Livre de comptes traditionnel
 
@@ -17,7 +17,7 @@ Celui-ci peut être digitalisé ou même maintenu dans un simple cahier en papie
 
 ## Livre de compte distribué
 
-Grâce aux progrès en cryptographie, technologie permettant de garantir l'intégrité de données digitalisées, nous avons pu mettre en place un livre de compte décentralisé permettant de corriger ces défauts:
+Grâce aux progrès en cryptographie, technologie permettant de garantir l'intégrité de données digitalisées et en sécuriser les échanges, nous avons pu mettre en place un livre de compte décentralisé permettant de corriger ces défauts:
 
 1. Décentralisé: Le livre de compte existe à plusieurs endroits différents (créant un réseau), chaque participant peut écrire une transaction dans ce livre de compte qui sera ensuite synchronisé avec les autres copies via un mécanisme de validation, consensus et réplication.
 2. Infalsifiable: Chaque copie du livre de compte est identique, un livre de compte falsifié ne pourrait plus ajouter de nouvelles transactions et serait rejeté par le réseau.
