@@ -7,3 +7,15 @@ Pour ce faire, nous allons mettre en place:
 1. Un Smart Contract qui enregistre le brossage de dents et donne une récompense lorsque celui-ci est régulier et efficace.
 2. Une brosse à dents intelligente qui envoie les informations de brossage au Smart Contract
 3. Une interface qui nous permet de voir nos récompenses!
+
+## 1 Déploiement du Smart Contract
+
+Nous allons tester et déployer le Smart Contract.
+
+Voir [01 Smart Contract](./01-smart-contract.md)
+
+## 2 Brosse à dents intelligente
+
+Nous allons développer une petite application simulant une brosse à dents envoyant les informations de brossage
+
+Voir [Toothbrush](./02-toothbrush)

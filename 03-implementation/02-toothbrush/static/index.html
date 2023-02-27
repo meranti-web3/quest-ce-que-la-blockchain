@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title>Brush 2 Earn</title>
+    <style type="text/css">
+      .toothbrush {
+        display: flex;
+        align-items: center;
+      }
+
+      .toothbrush button img {
+        border: 1px solid black;
+        cursor: pointer;
+
+        height: 200px;
+        width: 350px;
+      }
+
+      .rewards {
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        margin-left: 2rem;
+      }
+
+      .rewards button {
+        height: 50px;
+        margin-right: 2rem;
+      }
+
+      .rewards span {
+        font-size: 2rem;
+      }
+
+      .history {
+        margin-top: 5rem;
+      }
+
+      .history ul {
+        padding: 0;
+        height: 10rem;
+        overflow: scroll;
+        border: 1px solid black;
+        list-style-type: none;
+      }
+
+      .history li {
+        padding: .5rem;
+      }
+
+      .history li:nth-of-type(odd) {
+        background-color: lightblue;
+      }
+
+      .history li.error {
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Brush 2 Earn!</h1>
+
+    <div class="toothbrush">
+      <button>
+        <img src="./brush.jpg" />
+        <p>Cliquez-moi et gagnez des récompenses!</p>
+      </button>
+  
+      <p class="rewards">
+        <button>Voir récompenses</button>
+        <span>--</span>
+      </div>
+    </div>
+
+
+    <div class="history">
+      <p>Historique:</p>
+      <ul>
+
+      </ul>
+    </div>
+
+    <script>
+      const historyList = document.querySelector(".history ul");
+      const rewardsEl = document.querySelector(".rewards span");
+
+      document.querySelector(".toothbrush button").addEventListener("click", async () => {
+          const brushResult = await fetch("/brush", {
+            method: "POST"
+          });
+
+          const text = await brushResult.text();
+
+          if (brushResult.status === 200) {
+            addHistory(text);
+          } else {
+            addHistory(text, "error");
+          }
+      });
+
+      document.querySelector(".rewards button").addEventListener("click", async () => {
+        const rewards = await fetch("/rewards");
+        rewardsEl.innerHTML = await rewards.text();
+      });
+
+      function addHistory(text, className = "") {
+        const li = document.createElement("li");
+        li.innerText = text;
+        li.className = className;
+        requestAnimationFrame(li.scrollIntoView.bind(li));
+        historyList.appendChild(li);
+      }
+
+</script>
+  </body>
+</html>
