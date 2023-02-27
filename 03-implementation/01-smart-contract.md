@@ -21,3 +21,14 @@ private key: 0x<clé privée>
 ```
 
 Nous allons garder ces informations dans le `.env` pour que l'application puisse les utiliser.
+
+## Deploiement du Smart Contract
+
+Pour ce faire, nous allons utiliser [hardhat](https://hardhat.org/), qui est une suite d'outils pour le développement de Smart Contracts ethereum.
+
+Après avoir initialisé le projet dans `./contracts` avec `npx hardhat` nous allons coller le contrat `ToothbrushRewards` de ChatGPT dans `contracts/contracts`.
+
+Nous pouvons ensuite compiler le contrat (`npx hardhat compile`), après avoir corrigé quelques erreurs.
+
+Nous sommes maintenant prêts à déployer le contrat sur Polygon Testnet, notre blockchain de choix.
+Vous pouvez trouver le contrat à cette adresse. [`0x579220B1B374340E12dC55A0d1FCd77Ff1F85cD2`](https://mumbai.polygonscan.com/address/0x579220B1B374340E12dC55A0d1FCd77Ff1F85cD2)
