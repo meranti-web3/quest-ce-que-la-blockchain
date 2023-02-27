@@ -15,7 +15,7 @@ J'en profiterai pour vous donner des liens utiles pour en apprendre plus et d'au
 
 ## Install
 
-Pour pouvoir suivre ce tutorial, assurez-vous d'avoir [Docker](https://docs.docker.com/get-docker/) installé ou tout autre outil compatible.
+Pour pouvoir suivre ce tutorial, assurez-vous d'avoir [Node](https://nodejs.org/en/) installé.
 
 ## 01 Qu'est-ce que la blockchain?
 

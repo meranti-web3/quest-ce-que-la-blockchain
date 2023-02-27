@@ -18,4 +18,21 @@ Voir [01 Smart Contract](./01-smart-contract.md)
 
 Nous allons développer une petite application simulant une brosse à dents envoyant les informations de brossage
 
-Voir [Toothbrush](./02-toothbrush)
+Si ce n'est déjà fait, assurez vous d'exécuter `npm install` dans ce répertoire:
+
+```sh
+npm install
+```
+
+Puis nous allons exécuter la démo [02 Toothbrush](./02-toothbrush):
+
+```sh
+cd 02-toothbrush
+
+node server.mjs
+Serveur de brosse à dents écoute sur le port 8123
+```
+
+Enfin, ouvrez `http://localhost:8123` dans un navigateur.
+
+Chaque clic sur la brosse à dent appelera la fonction `brushTeeth` de notre [Smart Contract situé ici](https://mumbai.polygonscan.com/address/0x09cA4C1294930523D39213E8002883C3BdcF301c) et si 30 secondes se sont écoulées vous pourrez voir le nouveau montant de votre récompense que vous pourrez plus tard réclamer au fabriquant.
