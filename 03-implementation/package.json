@@ -1,0 +1,11 @@
+{
+  "name": "demo-brush2earn",
+  "version": "1.0.0",
+  "description": "demo brush2earn",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ethers": "^6.0.8"
+  }
+}
