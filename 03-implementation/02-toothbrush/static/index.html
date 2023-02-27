@@ -107,7 +107,7 @@
 
       function addHistory(text) {
         const li = document.createElement("li");
-        li.innerText = text;
+        li.innerText = `${ new Date().toUTCString() }: ${ text }`;
         requestAnimationFrame(li.scrollIntoView.bind(li));
         historyList.appendChild(li);
       }
