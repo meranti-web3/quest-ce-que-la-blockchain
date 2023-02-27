@@ -91,7 +91,7 @@ describe("ToothbrushRewards", function () {
 
       await toothbrushRewards.connect(aliceAccount).brushTeeth();
 
-      await time.increase(60);
+      await time.increase(30);
 
       await toothbrushRewards.connect(aliceAccount).brushTeeth();
 

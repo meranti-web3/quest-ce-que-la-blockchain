@@ -16,7 +16,7 @@ contract ToothbrushRewards {
     function brushTeeth() public {
         if (
             lastReward[msg.sender] == 0 ||
-            block.timestamp > lastReward[msg.sender] + 60
+            block.timestamp > lastReward[msg.sender] + 30
         ) {
             lastReward[msg.sender] = block.timestamp;
             rewards[msg.sender] += rewardAmount;

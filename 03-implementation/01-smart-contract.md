@@ -34,7 +34,7 @@ Nous sommes maintenant prêts à déployer le contrat sur Polygon Testnet, notre
 
 ```sh
 npx hardhat run ./scripts/deploy.js --network polygontestnet
-ToothbrushRewards deployed to 0x579220B1B374340E12dC55A0d1FCd77Ff1F85cD2
+ToothbrushRewards deployed to 0x09cA4C1294930523D39213E8002883C3BdcF301c
 ```
 
-Vous pouvez trouver le contrat à cette adresse. [`0x579220B1B374340E12dC55A0d1FCd77Ff1F85cD2`](https://mumbai.polygonscan.com/address/0x579220B1B374340E12dC55A0d1FCd77Ff1F85cD2)
+Vous pouvez trouver le contrat à cette adresse. [`0x09cA4C1294930523D39213E8002883C3BdcF301c`](https://mumbai.polygonscan.com/address/0x09cA4C1294930523D39213E8002883C3BdcF301c)

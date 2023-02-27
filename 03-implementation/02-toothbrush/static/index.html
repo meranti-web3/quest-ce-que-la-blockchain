@@ -15,6 +15,10 @@
         width: 350px;
       }
 
+      .toothbrush button:disabled {
+        opacity: .5;
+      }
+
       .rewards {
         display: flex;
         align-items: center;
@@ -82,19 +86,18 @@
     <script>
       const historyList = document.querySelector(".history ul");
       const rewardsEl = document.querySelector(".rewards span");
+      const toothbrushBtn = document.querySelector(".toothbrush button");
 
-      document.querySelector(".toothbrush button").addEventListener("click", async () => {
+      toothbrushBtn.addEventListener("click", async () => {
+        toothbrushBtn.disabled = true;
+
           const brushResult = await fetch("/brush", {
             method: "POST"
           });
 
-          const text = await brushResult.text();
+          addHistory(await brushResult.text());
 
-          if (brushResult.status === 200) {
-            addHistory(text);
-          } else {
-            addHistory(text, "error");
-          }
+          toothbrushBtn.disabled = false;
       });
 
       document.querySelector(".rewards button").addEventListener("click", async () => {
@@ -102,10 +105,9 @@
         rewardsEl.innerHTML = await rewards.text();
       });
 
-      function addHistory(text, className = "") {
+      function addHistory(text) {
         const li = document.createElement("li");
         li.innerText = text;
-        li.className = className;
         requestAnimationFrame(li.scrollIntoView.bind(li));
         historyList.appendChild(li);
       }
