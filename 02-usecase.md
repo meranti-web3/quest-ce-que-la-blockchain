@@ -56,17 +56,17 @@ Je ne sais pas si ce contrat est pertinent, mais essayons une implémentation et
 ## Pourquoi la blockchain?
 
 Ce cas d'usage est intéressant, mais pourquoi utiliser la blockchain plutôt qu'une autre base de données?
-En effet, nous aurions pu simplement envoyer les informations de brossage au fabriquant qui offre les récompenses et obtenir des euros en échange.
+En effet, nous aurions pu simplement envoyer les informations de brossage au fabricant qui offre les récompenses et obtenir des euros en échange.
 
 ### 1. Confiance
 
-Nous allons utiliser une blockchain qui n'est pas maintenue par le fabriquant de brosse à dents mais par un réseau de participants gouvernés par leurs règles propres.
+Nous allons utiliser une blockchain qui n'est pas maintenue par le fabricant de brosse à dents mais par un réseau de participants gouvernés par leurs règles propres.
 Les informations concernant le dernier brossage seront stockées dans ce Smart Contract et seront associées directement au compte de notre brosse à dents intelligente.
-Les informations conernant les récompenses sont égalements décrites dans ce Smart Contract.
+Les informations concernant les récompenses sont égalements décrites dans ce Smart Contract.
 
-On observe qu'il est impossible pour un utilisateur de brosse à dents intelligente de prétendre être un autre utilisateur et faire gagner des récomponses à d'autres utilisateurs.
-Il n'est également pas possible pour le fabriquant de prétendre ne pas avoir reçu les informations de brossage et de ne pas déclencher la récomponse associée.
-Les données étant stockées chez un tiers de confiance (la blockchain), le système permet de créer une confiance plus importante qu'avec d'autres sytèmes de base de données.
+On observe qu'il est impossible pour un utilisateur de brosse à dents intelligente de prétendre être un autre utilisateur et faire gagner des récompenses à d'autres utilisateurs.
+Il n'est également pas possible pour le fabricant de prétendre ne pas avoir reçu les informations de brossage et de ne pas déclencher la récompense associée.
+Les données étant stockées chez un tiers de confiance (la blockchain), le système permet de créer une confiance plus importante qu'avec d'autres systèmes de base de données.
 
 ### 2. Transparence
 
@@ -79,6 +79,6 @@ Les mécanismes cryptographiques mis en oeuvre sont le fruit de décennies de re
 
 ### 4. Echange de monnaie digitale et d'informations
 
-Nous avons pu échanger des informations entre la brosse à dents intelligente et le fabriquant, mais la blockchain permet également l'échange d'une monnaie digitale, ou jeton, ce qui nous permettra d'obtenir les récompenses de notre brossage.
-En effet, en fonction du jeton utilisé nous pourrons soit l'échanger contre un autre jeton soit contre de l'euro sur un exchange.
-Sans utiliser la blockchain, il aurait été plus difficile pour le fabriquant de nous faire parvenir notre récompense en euros. Envoie d'un bon par la poste? Retrait en magasin? Virement bancaire?
+Nous avons pu échanger des informations entre la brosse à dents intelligente et le fabricant, mais la blockchain permet également l'échange d'une monnaie digitale, ou jeton, ce qui nous permettra d'obtenir les récompenses de notre brossage.
+En effet, en fonction du jeton utilisé nous pourrions soit l'échanger contre un autre jeton soit contre de l'euro sur un exchange.
+Sans utiliser la blockchain, il aurait été plus difficile pour le fabricant de nous faire parvenir notre récompense en euros. Envoie d'un bon par la poste? Retrait en magasin? Virement bancaire?

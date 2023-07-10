@@ -26,13 +26,27 @@ npm install
 
 Puis nous allons exécuter la démo [02 Toothbrush](./02-toothbrush):
 
-```sh
-cd 02-toothbrush
+cmd sh depuis la racine
 
+```sh
+cd 03-implementation/02-toothbrush
+```
+
+puis...
+
+```sh
 node server.mjs
+```
+
+résultat :
+```sh
 Serveur de brosse à dents écoute sur le port 8123
 ```
 
 Enfin, ouvrez `http://localhost:8123` dans un navigateur.
 
-Chaque clic sur la brosse à dent appelera la fonction `brushTeeth` de notre [Smart Contract situé ici](https://mumbai.polygonscan.com/address/0x09cA4C1294930523D39213E8002883C3BdcF301c) et si 30 secondes se sont écoulées vous pourrez voir le nouveau montant de votre récompense que vous pourrez plus tard réclamer au fabriquant.
+Chaque clic sur la brosse à dents appelera la fonction `brushTeeth` de notre [Smart Contract situé ici](https://mumbai.polygonscan.com/address/0x09cA4C1294930523D39213E8002883C3BdcF301c) et si 30 secondes se sont écoulées vous pourrez voir le nouveau montant de votre récompense que vous pourrez plus tard  réclamer au fabriquant.
+
+Si le serveur s'arrête soudainement, cela signifie que l'adresse du fabricant ainsi que celle de la brosse ne disposent pas de fonds nécessaire, dans ce cas, un message d'erreur apparaîtra sur le terminal une fois le serveur coupé. `no funds`
+
+Pour remédier à cela, rendez vous sur le site `Polygon Faucet` pour demander des MATIC, ils représentent des "Test Token" (Tokens sans aucune valeur pécuniaire) qui vont permettre d'ajouter les fonds nécessaires pour payer les transactions (techniquement appelés Gaz).
